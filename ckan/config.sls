@@ -24,3 +24,10 @@ ckan-ini-file:
     - require:
       - file: {{ ckan.confdir }}
 {% endif %}
+
+{{ ckan.confdir }}/celeryconfig.py:
+  file.managed:
+    - source: salt://ckan/files/celeryconfig.py
+    - template: jinja
+    - require:
+      - file: {{ ckan.confdir }}
