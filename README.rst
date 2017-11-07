@@ -28,6 +28,9 @@ Database could be initialized with::
     docker exec -it ckan /home/ckan/bin/supervisorctl start all
 
 
+The docker image accept a `SENTRY_DSN` environment variable to enable Sentry_
+support for celery workers.
+
 Available states
 ================
 
@@ -81,3 +84,4 @@ in pillars.
 
 .. _CKAN: http://ckan.org
 .. _supervisor: http://supervisord.org
+.. _Sentry: https://setry.io
