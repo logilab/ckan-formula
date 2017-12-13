@@ -39,6 +39,7 @@ ckan:
         plugins:
           - spatial_metadata
           - spatial_query
+          - csw_harvester
       issues:
         plugins:
           - issues
