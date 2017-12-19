@@ -28,13 +28,9 @@ ckan:
         options:
           ckan.harvest.mq.type: redis
       dcat:
-        repourl: https://github.com/datalocale/ckanext-dcat
-        branch: datalocale
         plugins:
           - dcat
           - dcat_rdf_harvester
-        options:
-          ckanext.dcat.rdf.profiles: euro_dcat_ap eurovoc_groups_dcat_ap labeled_concepts_dcat_ap
       spatial:
         plugins:
           - spatial_metadata
@@ -47,6 +43,9 @@ ckan:
           ckanext.issues.send_email_notifications: true
           ckanext.issues.max_strikes: 2
       datalocale:
-        repourl: https://github.com/datalocale/ckanext-datalocale
+        repourl: https://github.com/logilab/ckanext-datalocale
+        branch: dcat-rdf-profiles
         plugins:
           - datalocale
+        options:
+          ckanext.dcat.rdf.profiles: euro_dcat_ap eurovoc_groups_dcat_ap labeled_concepts_dcat_ap
